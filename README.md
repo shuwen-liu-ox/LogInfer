@@ -60,7 +60,7 @@ Given a KG (FB/WN/LUBM) and the inference patterns, to generate the candidate ru
 where DATASET_NAME can be chosen from {FB, WN, LUBM}, and PATTERN_NAME can be chosen from {symmetry, hierarchy, inversion, composition, intersection, triangle, diamond}.
 
 
-Then, to use RDFox for searching the support of the body of the rules, put the RDFox files and licenses in this folder, and run the following command:
+Then, to use RDFox for searching the support of the body of the rules, put the RDFox license in this folder, and run the following command:
 
 ``./RDFox sandbox . start_DATASET_NAME_PATTERN_NAME.rdfox``
 
