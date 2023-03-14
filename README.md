@@ -26,7 +26,7 @@ The original dataset of LUBM can be found in the file LUBM1_0.ttl.
 
 All 37 benchmarks used in the experiments are available at the folder LogicInfer-benchmark in this repository.
 
-Each benchmark LogInferFB^Y_Z / LogInferWN^Y_Z / LogInferLUBM^Y_Z contains the following in the subfolder LogInferFB-Y-Z / LogInferWN-Y-Z / LogInferLUBM-Y-Z:
+Each benchmark LogInfer-FB^Y_Z / LogInfer-WN^Y_Z / LogInfer-LUBM^Y_Z contains the following in the subfolder LogInfer-FB-Y-Z / LogInfer-WN-Y-Z / LogInfer-LUBM-Y-Z:
 
 - train.txt    --------positive training set
 - valid.txt    --------positive validation set
