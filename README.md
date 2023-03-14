@@ -43,7 +43,7 @@ Each benchmark LogInfer-FB^Y_Z / LogInfer-WN^Y_Z / LogInfer-LUBM^Y_Z contains th
 - Python 3.6.9
 - numpy
 - random
-- [RDFox](https://www.oxfordsemantic.tech/product)
+- [RDFox](https://www.cs.ox.ac.uk/isg/tools/RDFox/2014/AAAI/)
 
 
 ----------------------------------
