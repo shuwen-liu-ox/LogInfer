@@ -1,0 +1,4 @@
+_member_meronym
+_hypernym
+_has_part
+_synset_domain_topic_of

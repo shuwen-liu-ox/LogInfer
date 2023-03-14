@@ -1,0 +1,5 @@
+_derivationally_related_form
+_instance_hypernym
+_member_of_domain_region
+_member_of_domain_usage
+_similar_to
