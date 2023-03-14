@@ -1,9 +1,0 @@
-_hypernym
-_similar_to
-_instance_hypernym
-_synset_domain_topic_of
-_member_of_domain_usage
-_member_of_domain_region
-_member_meronym
-_derivationally_related_form
-_also_see

@@ -1,7 +1,0 @@
-<http://swat.cse.lehigh.edu/onto/univ-bench.owl#advisor_takesCourse>
-<http://swat.cse.lehigh.edu/onto/univ-bench.owl#connectedCourses>
-<http://swat.cse.lehigh.edu/onto/univ-bench.owl#colleagues>
-<rdf:type>
-<http://swat.cse.lehigh.edu/onto/univ-bench.owl#memberOf>
-<http://swat.cse.lehigh.edu/onto/univ-bench.owl#member>
-<http://swat.cse.lehigh.edu/onto/univ-bench.owl#degreeFrom>

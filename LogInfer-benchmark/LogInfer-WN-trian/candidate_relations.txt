@@ -1,9 +1,0 @@
-_hypernym
-_similar_to
-_instance_hypernym
-_synset_domain_topic_of
-_member_of_domain_usage
-_verb_group
-_has_part
-_member_of_domain_region
-_derivationally_related_form
