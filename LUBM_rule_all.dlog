@@ -1,0 +1,117 @@
+PREFIX a1: <http://swat.cse.lehigh.edu/onto/univ-bench.owl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ruleml: <http://www.w3.org/2003/11/ruleml#>
+PREFIX swrl: <http://www.w3.org/2003/11/swrl#>
+PREFIX swrlb: <http://www.w3.org/2003/11/swrlb#>
+PREFIX swrlx: <http://www.w3.org/2003/11/swrlx#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ [?X, a1:colleagues, ?Z] :- [?X, a1:colleagues, ?Y], [?Y, a1:colleagues, ?Z] .
+ [?X1, rdf:type, a1:University] :- [?X, a1:mastersDegreeFrom, ?X1] .
+ [?X, rdf:type, a1:Person] :- [?X, a1:title, ?X1] .
+ [?X, a1:degreeFrom, ?Y] :- [?Y, a1:hasAlumnus, ?X] .
+ [?X, a1:hasAlumnus, ?Y] :- [?Y, a1:degreeFrom, ?X] .
+ [?X, rdf:type, a1:Employee] :- [?X, rdf:type, a1:Faculty] .
+ [?X, rdf:type, a1:Faculty] :- [?X, rdf:type, a1:Professor] .
+ [?X1, rdf:type, a1:Course] :- [?X, a1:listedCourse, ?X1] .
+ [?X, rdf:type, a1:Professor] :- [?X, rdf:type, a1:AssociateProfessor] .
+ [?X1, rdf:type, a1:Person] :- [?X, a1:member, ?X1] .
+ [?X, rdf:type, a1:Professor] :- [?X, rdf:type, a1:AssistantProfessor] .
+ [?X, rdf:type, a1:Organization] :- [?X, a1:orgPublication, ?X1] .
+ [?X, rdf:type, a1:Professor] :- [?X, rdf:type, a1:Chair] .
+ [?X, rdf:type, a1:Article] :- [?X, rdf:type, a1:TechnicalReport] .
+ [?X, a1:colleagues, ?Y] :- [?Y, a1:colleagues, ?X] .
+ [?X, a1:worksFor, ?Y] :- [?X, a1:headOf, ?Y] .
+ [?X, rdf:type, a1:Person] :- [?X, a1:age, ?X1] .
+ [?X, rdf:type, a1:Person] :- [?X, a1:degreeFrom, ?X1] .
+ [?X1, rdf:type, a1:University] :- [?X, a1:degreeFrom, ?X1] .
+ [?X, rdf:type, a1:Publication] :- [?X, rdf:type, a1:Specification] .
+ [?X, rdf:type, a1:AdministrativeStaff] :- [?X, rdf:type, a1:SystemsStaff] .
+ [?X1, rdf:type, a1:Person] :- [?X, a1:hasAlumnus, ?X1] .
+ [?X1, rdf:type, a1:Publication] :- [?X, a1:softwareDocumentation, ?X1] .
+ [?X, rdf:type, a1:Faculty] :- [?X, rdf:type, a1:PostDoc] .
+ [?X0, a1:colleagues, ?X3] :- [?X0, a1:teacherOf, ?X1], [?X1, a1:connectedCourses, ?X2], [?X3, a1:teacherOf, ?X2] .
+ [?X, rdf:type, a1:Software] :- [?X, a1:softwareVersion, ?X1] .
+ [?X, rdf:type, a1:Article] :- [?X, rdf:type, a1:ConferencePaper] .
+ [?X, rdf:type, a1:TeachingAssistant] :- [?X, rdf:type, a1:Person], [?X, a1:teachingAssistantOf, ?X1], [?X1, rdf:type, a1:Course] .
+ [?X1, rdf:type, a1:Person] :- [?X, a1:affiliateOf, ?X1] .
+ [?X, rdf:type, a1:Chair] :- [?X, rdf:type, a1:Person], [?X, a1:headOf, ?X1], [?X1, rdf:type, a1:Department] .
+ [?X, a1:connectedCourses, ?Z] :- [?X, a1:connectedCourses, ?Y], [?Y, a1:connectedCourses, ?Z] .
+ [?X, rdf:type, a1:Director] :- [?X, rdf:type, a1:Person], [?X, a1:headOf, ?X1], [?X1, rdf:type, a1:Program] .
+ [?X, a1:memberOf, ?Y] :- [?Y, a1:member, ?X] .
+ [?X, a1:member, ?Y] :- [?Y, a1:memberOf, ?X] .
+ [?X, rdf:type, a1:Professor] :- [?X, a1:tenured, ?X1] .
+ [?X0, a1:connectedCourses, ?X2] :- [?X1, a1:takesCourse, ?X0], [?X1, a1:takesCourse, ?X2] .
+ [?X1, rdf:type, a1:Course] :- [?X, a1:teacherOf, ?X1] .
+ [?X, rdf:type, a1:University] :- [?X, a1:hasAlumnus, ?X1] .
+ [?X0, a1:advisor_takesCourse, ?X2] :- [?X1, a1:advisor, ?X0], [?X1, a1:takesCourse, ?X2] .
+ [?X, rdf:type, a1:Work] :- [?X, rdf:type, a1:Research] .
+ [?X, rdf:type, a1:Person] :- [?X, a1:telephone, ?X1] .
+ [?X, rdf:type, a1:Organization] :- [?X, rdf:type, a1:Institute] .
+ [?X1, rdf:type, a1:Organization] :- [?X, a1:subOrganizationOf, ?X1] .
+ [?X, a1:memberOf, ?Y] :- [?X, a1:worksFor, ?Y] .
+ [?X, rdf:type, a1:Person] :- [?X, rdf:type, a1:Employee] .
+ [?X, rdf:type, a1:Software] :- [?X, a1:softwareDocumentation, ?X1] .
+ [?X, rdf:type, a1:Person] :- [?X, a1:advisor, ?X1] .
+ [?X0, a1:colleagues, ?X3] :- [?X0, a1:teacherOf, ?X1], [?X2, a1:takesCourse, ?X1], [?X2, a1:advisor, ?X3] .
+ [?X, rdf:type, a1:Organization] :- [?X, a1:member, ?X1] .
+ [?X, rdf:type, a1:Organization] :- [?X, rdf:type, a1:Department] .
+ [?X, rdf:type, a1:Publication] :- [?X, rdf:type, a1:Article] .
+ [?X, rdf:type, a1:Faculty] :- [?X, rdf:type, a1:Lecturer] .
+ [?X1, rdf:type, a1:Person] :- [?X, a1:publicationAuthor, ?X1] .
+ [?X1, rdf:type, a1:Research] :- [?X, a1:researchProject, ?X1] .
+ [?X, rdf:type, a1:Publication] :- [?X, rdf:type, a1:Software] .
+ [?X0, a1:colleagues, ?X2] :- [?X0, a1:advisor_takesCourse, ?X1], [?X2, a1:advisor_takesCourse, ?X1] .
+ [?X, rdf:type, a1:Organization] :- [?X, rdf:type, a1:Program] .
+ [?X, rdf:type, a1:Employee] :- [?X, rdf:type, a1:AdministrativeStaff] .
+ [?X1, rdf:type, a1:Professor] :- [?X, a1:advisor, ?X1] .
+ [?X, rdf:type, a1:Work] :- [?X, rdf:type, a1:Course] .
+ [?X, rdf:type, a1:Publication] :- [?X, rdf:type, a1:Book] .
+ [?X, rdf:type, a1:Professor] :- [?X, rdf:type, a1:FullProfessor] .
+ [?X, rdf:type, a1:Publication] :- [?X, a1:publicationResearch, ?X1] .
+ [?X, a1:degreeFrom, ?Y] :- [?X, a1:doctoralDegreeFrom, ?Y] .
+ [?X, rdf:type, a1:AdministrativeStaff] :- [?X, rdf:type, a1:ClericalStaff] .
+ [?X, rdf:type, a1:Organization] :- [?X, a1:affiliatedOrganizationOf, ?X1] .
+ [?X, rdf:type, a1:TeachingAssistant] :- [?X, a1:teachingAssistantOf, ?X1] .
+ [?X, rdf:type, a1:Professor] :- [?X, rdf:type, a1:VisitingProfessor] .
+ [?X, rdf:type, a1:Person] :- [?X, a1:undergraduateDegreeFrom, ?X1] .
+ [?X, rdf:type, a1:Organization] :- [?X, rdf:type, a1:University] .
+ [?X, rdf:type, a1:Article] :- [?X, rdf:type, a1:JournalArticle] .
+ [?X1, rdf:type, a1:Research] :- [?X, a1:publicationResearch, ?X1] .
+ [?X, rdf:type, a1:Person] :- [?X, rdf:type, a1:Director] .
+ [?X, rdf:type, a1:Person] :- [?X, a1:doctoralDegreeFrom, ?X1] .
+ [?X, rdf:type, a1:Publication] :- [?X, a1:publicationDate, ?X1] .
+ [?X1, rdf:type, a1:Organization] :- [?X, a1:affiliatedOrganizationOf, ?X1] .
+ [?X1, rdf:type, a1:University] :- [?X, a1:doctoralDegreeFrom, ?X1] .
+ [?X1, rdf:type, a1:University] :- [?X, a1:undergraduateDegreeFrom, ?X1] .
+ [?X1, rdf:type, a1:Course] :- [?X, a1:teachingAssistantOf, ?X1] .
+ [?X, a1:degreeFrom, ?Y] :- [?X, a1:mastersDegreeFrom, ?Y] .
+ [?X, rdf:type, a1:Schedule] :- [?X, a1:listedCourse, ?X1] .
+ [?X, rdf:type, a1:Person] :- [?X, rdf:type, a1:GraduateStudent] .
+ [?X, rdf:type, a1:Person] :- [?X, rdf:type, a1:ResearchAssistant] .
+ [?X, rdf:type, a1:Student] :- [?X, rdf:type, a1:UndergraduateStudent] .
+ [?X, a1:degreeFrom, ?Y] :- [?X, a1:undergraduateDegreeFrom, ?Y] .
+ [?X, rdf:type, a1:Publication] :- [?X, a1:publicationAuthor, ?X1] .
+ [?X, rdf:type, a1:Person] :- [?X, a1:mastersDegreeFrom, ?X1] .
+ [?X, rdf:type, a1:Organization] :- [?X, rdf:type, a1:College] .
+ [?X, rdf:type, a1:Faculty] :- [?X, a1:teacherOf, ?X1] .
+ [?X, rdf:type, a1:Organization] :- [?X, rdf:type, a1:ResearchGroup] .
+ [?X, rdf:type, a1:Publication] :- [?X, rdf:type, a1:UnofficialPublication] .
+ [?X, rdf:type, a1:ResearchGroup] :- [?X, a1:researchProject, ?X1] .
+ [?X, rdf:type, a1:Employee] :- [?X, rdf:type, a1:Person], [?X, a1:worksFor, ?X1], [?X1, rdf:type, a1:Organization] .
+ [?X, rdf:type, a1:Person] :- [?X, rdf:type, a1:Chair] .
+ [?X, rdf:type, a1:Organization] :- [?X, a1:affiliateOf, ?X1] .
+ [?X, rdf:type, a1:Course] :- [?X, rdf:type, a1:GraduateCourse] .
+ [?X, rdf:type, a1:Student] :- [?X, rdf:type, a1:Person], [?X, a1:takesCourse, ?X1], [?X1, rdf:type, a1:Course] .
+ [?X, rdf:type, a1:Professor] :- [?X, rdf:type, a1:Dean] .
+ [?X1, rdf:type, a1:Publication] :- [?X, a1:orgPublication, ?X1] .
+ [?X, rdf:type, a1:Publication] :- [?X, rdf:type, a1:Manual] .
+ [?X, rdf:type, a1:Dean] :- [?X, a1:headOf, ?X1], [?X1, rdf:type, a1:College] .
+ [?X, rdf:type, a1:Person] :- [?X, rdf:type, a1:TeachingAssistant] .
+ [?X, rdf:type, a1:Organization] :- [?X, a1:subOrganizationOf, ?X1] .
+ [?X, a1:connectedCourses, ?Y] :- [?Y, a1:connectedCourses, ?X] .
+ [?X, rdf:type, a1:Person] :- [?X, rdf:type, a1:Student] .
+ [?X, rdf:type, a1:Person] :- [?X, a1:emailAddress, ?X1] .
+ [?X, a1:subOrganizationOf, ?Z] :- [?X, a1:subOrganizationOf, ?Y], [?Y, a1:subOrganizationOf, ?Z] .
