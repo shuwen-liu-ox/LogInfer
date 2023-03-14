@@ -28,14 +28,14 @@ All 37 benchmarks used in the experiments are available at the folder LogicInfer
 
 Each benchmark LogInferFB^Y_Z / LogInferWN^Y_Z / LogInferLUBM^Y_Z contains the following in the subfolder LogInferFB-Y / LogInferWN-Y / LogInferLUBM-Y:
 
-- Positive training set:      train.txt
-- Positive validation set:    valid.txt
-- Positive test set:    test.txt
-- Entities for generating negative examples using relevance-based random sampling:    candidate_entities.txt
-- Relations for generating negative examples using relevance-based random sampling:    candidate_relations.txt
-- Negative training set: train_neg_Z.txt
-- Negative validation set: train_neg_Z.txt
-- Negative test set: train_neg_Z.txt
+- train.txt    --------positive training set
+- valid.txt    --------positive validation set
+- test.txt    --------positive training set
+- candidate_entities.txt    --------Entities for generating negative examples using relevance-based random sampling
+- candidate_relations.txt    --------Relations for generating negative examples using relevance-based random sampling
+- train_neg_Z.txt    --------Negative training set
+- valid_neg_Z.txt    --------Negative validation set
+- test_neg_Z.txt    --------Negative test set
 
 ----------------------------------
 
